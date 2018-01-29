@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>My App!</h1>
+    <form onsubmit="return register(this)">
+        <input type="text" id="author" placeholder="Enter your username">
+        <input type="submit" value="Send">
+    </form>
+    <br/>
+    <div id="messages"></div>
+    <br/>
+    <form onsubmit="return addMessage(this)">
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="text" id="text" placeholder="Enter your message">
+        <input type="submit" value="Send">
+    </form>
+    <br/>
+    <br/>
+    <div id="private"></div>
+    <form onsubmit="return privateMessage(this)">
+        <input type="text" id="toid" placeholder="Enter reciever id">
+        <input type="text" id="privateUsername" placeholder="Enter your username">
+        <input type="text" id="privateText" placeholder="Enter your message">
+        <input type="text" id="privateContent" placeholder="Enter your message">
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
